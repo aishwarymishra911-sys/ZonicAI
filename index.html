@@ -1,1 +1,61 @@
-k
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackjack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ SELECT SCREEN ══════════════════════════════════════════ -->
+  <div id="select-screen" class="screen">
+    <div class="select-top">
+      <div class="suits">♠ ♥ ♦ ♣</div>
+      <h1 class="title">BLACKJACK</h1>
+      <p class="subtitle">CHOOSE YOUR OPPONENT</p>
+    </div>
+    <div class="ai-grid" id="ai-grid">
+      <!-- AI cards injected by game.js -->
+    </div>
+    <p class="select-footer">Starting chips: 1,000</p>
+  </div>
+
+  <!-- ═══ GAME SCREEN ════════════════════════════════════════════ -->
+  <div id="game-screen" class="screen hidden">
+
+    <!-- Top bar -->
+    <div class="top-bar">
+      <button id="btn-back" class="btn-back">← Change</button>
+      <div id="ai-badge" class="ai-badge"></div>
+      <div id="chips-display" class="chips-display">💰 1000</div>
+    </div>
+
+    <!-- Stats row -->
+    <div id="stats-row" class="stats-row"></div>
+
+    <!-- Table (dealer + outcome + player) -->
+    <div class="table">
+      <div class="hand-section">
+        <div id="dealer-label" class="hand-label">Dealer</div>
+        <div id="dealer-cards" class="cards"></div>
+      </div>
+
+      <div id="outcome-msg" class="outcome-msg"></div>
+
+      <div class="hand-section">
+        <div id="player-label" class="hand-label">You</div>
+        <div id="player-cards" class="cards"></div>
+      </div>
+    </div>
+
+    <!-- Action bar — always visible at bottom, never requires scrolling -->
+    <div id="action-bar" class="action-bar"></div>
+
+  </div>
+
+  <script src="cards.js"></script>
+  <script src="sounds.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
