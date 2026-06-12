@@ -17,7 +17,7 @@
 /* ── Base ─────────────────────────────────────────────────────── */
 html, body {
   height: 100%;
-  overflow: hidden;          /* CRITICAL — no page scroll ever */
+  overflow: visible;          /* CRITICAL — no page scroll ever */
   background: var(--bg);
   color: var(--text);
   font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
